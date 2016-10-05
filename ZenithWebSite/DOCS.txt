@@ -1,0 +1,14 @@
+﻿// Create tables 
+Enable-Migrations -ContextProject ZenithDataLib -ContextTypeName ZenithContext -MigrationsDirectory Migrations
+
+// Create the migration file 
+Add-Migration -ConfigurationTypeName ZenithWebSite.Migrations.Configuration "Initialization"
+
+// Create database (file) + seed data 
+Update-Database -ConfigurationTypeName ZenithWebSite.Migrations.Configuration
+
+// Show migrations list 
+Get-Migrations
+
+// Rollback/Migrate
+Update-Database -TargetMigration:"number of filename"
