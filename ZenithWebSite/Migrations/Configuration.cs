@@ -59,6 +59,7 @@ namespace ZenithWebSite.Migrations
                 ToDate = new DateTime(2016, 10, 5, 20, 0, 0),
                 CreatedBy = "Amanda",
                 IsActive = true,
+                CreationDate = new DateTime(2016, 10, 4, 12, 0, 0),
                 Activity = db.Activity.First(a => a.ActivityId == 1)
             });
             events.Add(new Event()
@@ -68,6 +69,7 @@ namespace ZenithWebSite.Migrations
                 ToDate = new DateTime(2016, 10, 6, 12, 0, 0),
                 CreatedBy = "Bob",
                 IsActive = false,
+                CreationDate = new DateTime(2016, 10, 5, 12, 0, 0),
                 Activity = db.Activity.First(a => a.ActivityId == 2)
             });
             events.Add(new Event()
@@ -77,6 +79,7 @@ namespace ZenithWebSite.Migrations
                 ToDate = new DateTime(2016, 10, 7, 12, 0, 0),
                 CreatedBy = "Coot",
                 IsActive = true,
+                CreationDate = new DateTime(2016, 10, 6, 12, 0, 0),
                 Activity = db.Activity.First(a => a.ActivityId == 3)
             });
             return events;

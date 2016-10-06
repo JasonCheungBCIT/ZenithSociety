@@ -12,6 +12,6 @@ namespace ZenithDataLib.Models
         [Key]
         public int ActivityId { get; set; }
         public string ActivityDescription { get; set; }
-        public DateTime CreationDate { get; set; }
+        public DateTime CreationDate { get; set; }  // For Activity (Not Event)
     }
 }

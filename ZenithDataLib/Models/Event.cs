@@ -15,8 +15,8 @@ namespace ZenithDataLib.Models
         public DateTime ToDate { get; set; }
         public string CreatedBy { get; set; }
         public bool IsActive { get; set; }
-
-        public int ActivityId { get; set; }     // TODO: According to the critiera, this should be CreationDate? 
+        public DateTime CreationDate { get; set; }  // For Event (not Activity)
+          
         public Activity Activity { get; set; }
     }
 }

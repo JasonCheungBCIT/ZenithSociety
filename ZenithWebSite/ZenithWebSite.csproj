@@ -205,6 +205,10 @@
     <Compile Include="Migrations\201610050356051_Initialization.Designer.cs">
       <DependentUpon>201610050356051_Initialization.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610062013536_Altered Events Model.cs" />
+    <Compile Include="Migrations\201610062013536_Altered Events Model.Designer.cs">
+      <DependentUpon>201610062013536_Altered Events Model.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -296,6 +300,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201610050356051_Initialization.resx">
       <DependentUpon>201610050356051_Initialization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610062013536_Altered Events Model.resx">
+      <DependentUpon>201610062013536_Altered Events Model.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
