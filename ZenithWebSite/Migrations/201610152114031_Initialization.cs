@@ -26,18 +26,19 @@ namespace ZenithWebSite.Migrations
                         ToDate = c.DateTime(nullable: false),
                         CreatedBy = c.String(),
                         IsActive = c.Boolean(nullable: false),
-                        ActivityId = c.Int(nullable: false),
+                        CreationDate = c.DateTime(nullable: false),
+                        Activity_ActivityId = c.Int(),
                     })
                 .PrimaryKey(t => t.EventId)
-                .ForeignKey("dbo.Activities", t => t.ActivityId, cascadeDelete: true)
-                .Index(t => t.ActivityId);
+                .ForeignKey("dbo.Activities", t => t.Activity_ActivityId)
+                .Index(t => t.Activity_ActivityId);
             
         }
         
         public override void Down()
         {
-            DropForeignKey("dbo.Events", "ActivityId", "dbo.Activities");
-            DropIndex("dbo.Events", new[] { "ActivityId" });
+            DropForeignKey("dbo.Events", "Activity_ActivityId", "dbo.Activities");
+            DropIndex("dbo.Events", new[] { "Activity_ActivityId" });
             DropTable("dbo.Events");
             DropTable("dbo.Activities");
         }
