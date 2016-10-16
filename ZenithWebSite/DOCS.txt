@@ -1,4 +1,5 @@
-﻿// Create tables 
+﻿### MIGRATIONS 
+// Create tables 
 Enable-Migrations -ContextProject ZenithDataLib -ContextTypeName ZenithContext -MigrationsDirectory Migrations
 
 // Create the migration file 
@@ -12,3 +13,8 @@ Get-Migrations
 
 // Rollback/Migrate
 Update-Database -TargetMigration:"number of filename"
+
+### ADMIN LOGIN INFO 
+Username: ZenithAdmin
+Password: !@3123QWEqwe
+Email:	  admin@zenith.com

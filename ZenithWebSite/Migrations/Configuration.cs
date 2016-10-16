@@ -22,7 +22,7 @@ namespace ZenithWebSite.Migrations
             context.SaveChanges();
             context.Event.AddOrUpdate(e => e.EventId, getEvents(context).ToArray());
             context.SaveChanges();
-
+    
         }
 
         private List<Activity> getActivities()
