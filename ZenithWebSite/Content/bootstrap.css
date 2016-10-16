@@ -1328,7 +1328,9 @@ mark,
   text-transform: lowercase;
 }
 .text-uppercase {
-  text-transform: uppercase;
+  text-trans
+      
+      : uppercase;
 }
 .text-capitalize {
   text-transform: capitalize;
@@ -2652,7 +2654,7 @@ input[type="search"] {
 .checkbox-inline input[type="checkbox"] {
   position: absolute;
   margin-top: 4px \9;
-  margin-left: -20px;
+  /* margin-left: -20px; */
 }
 .radio + .radio,
 .checkbox + .checkbox {

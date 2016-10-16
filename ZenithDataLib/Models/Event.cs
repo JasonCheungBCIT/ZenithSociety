@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Foolproof;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -6,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.Mvc;
+using ZenithDataLib.Models.CustomValidation;
 
 namespace ZenithDataLib.Models
 {
@@ -16,14 +18,16 @@ namespace ZenithDataLib.Models
 
         [Required]
         [DataType(DataType.DateTime)]  
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy hh:mm}")]    
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy hh:mm tt}")]    
+        [AfterNow()]
         [Display(Name = "From")]
         public DateTime FromDate { get; set; }
 
         [Required]
         [DataType(DataType.DateTime)]
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy hh:mm}")]
-        [Display(Name = "To")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy hh:mm tt}")]
+        [GreaterThan("FromDate")]
+        [Display(Name = "To")]  // Note: FoolProof Nuget
         public DateTime ToDate { get; set; }
 
         [Required]
