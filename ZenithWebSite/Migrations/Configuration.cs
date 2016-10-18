@@ -55,31 +55,31 @@ namespace ZenithWebSite.Migrations
             events.Add(new Event()
             {
                 EventId = 1,
-                FromDate = new DateTime(2016, 10, 5, 19, 0, 0),
-                ToDate = new DateTime(2016, 10, 5, 20, 0, 0),
+                FromDate = new DateTime(2016, 11, 5, 19, 0, 0),
+                ToDate = new DateTime(2016, 11, 5, 20, 0, 0),
                 CreatedBy = "Amanda",
                 IsActive = true,
-                CreationDate = new DateTime(2016, 10, 4, 12, 0, 0),
+                CreationDate = new DateTime(2016, 11, 4, 12, 0, 0),
                 Activity = db.Activity.First(a => a.ActivityId == 1)
             });
             events.Add(new Event()
             {
                 EventId = 2,
-                FromDate = new DateTime(2016, 10, 6, 10, 30, 0),
-                ToDate = new DateTime(2016, 10, 6, 12, 0, 0),
+                FromDate = new DateTime(2016, 11, 6, 10, 30, 0),
+                ToDate = new DateTime(2016, 11, 6, 12, 0, 0),
                 CreatedBy = "Bob",
                 IsActive = false,
-                CreationDate = new DateTime(2016, 10, 5, 12, 0, 0),
+                CreationDate = new DateTime(2016, 11, 5, 12, 0, 0),
                 Activity = db.Activity.First(a => a.ActivityId == 2)
             });
             events.Add(new Event()
             {
                 EventId = 3,
-                FromDate = new DateTime(2016, 10, 7, 10, 30, 0),
-                ToDate = new DateTime(2016, 10, 7, 12, 0, 0),
+                FromDate = new DateTime(2016, 11, 7, 10, 30, 0),
+                ToDate = new DateTime(2016, 11, 7, 12, 0, 0),
                 CreatedBy = "Coot",
                 IsActive = true,
-                CreationDate = new DateTime(2016, 10, 6, 12, 0, 0),
+                CreationDate = new DateTime(2016, 11, 6, 12, 0, 0),
                 Activity = db.Activity.First(a => a.ActivityId == 3)
             });
             return events;

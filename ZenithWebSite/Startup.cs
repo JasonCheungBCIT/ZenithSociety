@@ -37,11 +37,19 @@ namespace ZenithWebSite
                 user.Email = "admin@zenith.com";
                 string userPWD = "!@#123QWEqwe";
 
+                // Create an admin user for marking 
+                var user2 = new ApplicationUser();
+                user2.UserName = "a";
+                user2.Email = "a@a.a";
+                string user2PWD = "P@$$w0rd";
+
                 //Add default User to Role Admin  
                 var chkUser = UserManager.Create(user, userPWD);
+                var chkUser2 = UserManager.Create(user2, user2PWD);
                 if (chkUser.Succeeded)
                 {
                     var result1 = UserManager.AddToRole(user.Id, "Admin");
+                    var result2 = UserManager.AddToRole(user2.Id, "Admin");
                 }
             }
 
@@ -51,6 +59,19 @@ namespace ZenithWebSite
                 var role = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole();
                 role.Name = "Member";
                 roleManager.Create(role);
+
+                // Here we create a Admin super user who will maintain the website                  
+                var user = new ApplicationUser();
+                user.UserName = "m";
+                user.Email = "m@m.c";
+                string userPWD = "P@$$w0rd";
+
+                var chkUser = UserManager.Create(user, userPWD);
+
+                if (chkUser.Succeeded)
+                {
+                    var result1 = UserManager.AddToRole(user.Id, "Admin");
+                }
             }
         }
     }
