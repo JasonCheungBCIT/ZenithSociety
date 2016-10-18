@@ -15,7 +15,7 @@ namespace ZenithWebSite.Controllers
         {
             var @event = db.Event.Include(that => that.Activity);
 
-            Dictionary<DateTime , List<Event>> Week = new Dictionary<DateTime, List<Event>>();
+            Dictionary<String, List<Event>> Week = new Dictionary<String, List<Event>>();
 
             //Find the monday of this week
             DateTime today = DateTime.Now;
@@ -32,13 +32,17 @@ namespace ZenithWebSite.Controllers
             //add to dictionary
             foreach (var index in @event)
             {
-                if (Week.ContainsKey(index.FromDate))
+                if (index.IsActive)
                 {
-                    Week[index.FromDate].Add(index);
-                }
-                else
-                {
-                    Week[index.FromDate] = new List<Event> { index };
+                    if (Week.ContainsKey(index.FromDate.ToLongDateString()))
+                    {
+
+                        Week[index.FromDate.ToLongDateString()].Add(index);
+                    }
+                    else
+                    {
+                        Week[index.FromDate.ToLongDateString()] = new List<Event> { index };
+                    }
                 }
             }
 
@@ -51,19 +55,23 @@ namespace ZenithWebSite.Controllers
         {
             var @event = db.Event.Include(that => that.Activity);
 
-            Dictionary<DateTime, List<Event>> Week = new Dictionary<DateTime, List<Event>>();
+            Dictionary<String, List<Event>> Week = new Dictionary<String, List<Event>>();
 
-            
+
             //add to dictionary
             foreach (var index in @event)
             {
-                if (Week.ContainsKey(index.FromDate))
+                if (index.IsActive)
                 {
-                    Week[index.FromDate].Add(index);
-                }
-                else
-                {
-                    Week[index.FromDate] = new List<Event> { index };
+                    if (Week.ContainsKey(index.FromDate.ToLongDateString()))
+                    {
+                        Week[index.FromDate.ToLongDateString()].Add(index);
+                    }
+                    else
+                    {
+                        Week[index.FromDate.ToLongDateString()] = new List<Event>();
+                        Week[index.FromDate.ToLongDateString()].Add(index);
+                    }
                 }
             }
 
