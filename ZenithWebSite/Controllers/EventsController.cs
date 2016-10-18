@@ -19,7 +19,7 @@ namespace ZenithWebSite.Controllers
         public ActionResult Index()
         {
             var @event = db.Event.Include(@e => @e.Activity);
-            return View(@event.ToList());
+            return View(@event.OrderBy(name => name.FromDate).ToList());
         }
 
         // GET: Events/Details/5

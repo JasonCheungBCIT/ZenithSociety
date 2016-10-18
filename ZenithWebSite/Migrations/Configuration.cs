@@ -82,6 +82,26 @@ namespace ZenithWebSite.Migrations
                 CreationDate = new DateTime(2016, 11, 6, 12, 0, 0),
                 Activity = db.Activity.First(a => a.ActivityId == 3)
             });
+            events.Add(new Event()
+            {
+                EventId = 4,
+                FromDate = new DateTime(2016, 11, 7, 10, 30, 0),
+                ToDate = new DateTime(2016, 11, 7, 12, 0, 0),
+                CreatedBy = "Coot",
+                IsActive = true,
+                CreationDate = new DateTime(2016, 11, 6, 12, 0, 0),
+                Activity = db.Activity.First(a => a.ActivityId == 1)
+            });
+            events.Add(new Event()
+            {
+                EventId = 5,
+                FromDate = new DateTime(2016, 10, 28, 10, 30, 0),
+                ToDate = new DateTime(2016, 10, 28, 12, 0, 0),
+                CreatedBy = "Bob",
+                IsActive = true,
+                CreationDate = new DateTime(2016, 10, 20, 12, 0, 0),
+                Activity = db.Activity.First(a => a.ActivityId == 2)
+            });
             return events;
         }
     }

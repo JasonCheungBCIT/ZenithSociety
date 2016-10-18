@@ -214,6 +214,10 @@
     <Compile Include="Migrations\201610160730477_Updated Models.Designer.cs">
       <DependentUpon>201610160730477_Updated Models.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610180611522_added Events.cs" />
+    <Compile Include="Migrations\201610180611522_added Events.Designer.cs">
+      <DependentUpon>201610180611522_added Events.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -265,7 +269,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\All.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
@@ -318,6 +322,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201610160730477_Updated Models.resx">
       <DependentUpon>201610160730477_Updated Models.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610180611522_added Events.resx">
+      <DependentUpon>201610180611522_added Events.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
