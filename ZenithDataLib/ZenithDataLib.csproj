@@ -121,6 +121,7 @@
   <ItemGroup>
     <Compile Include="IdentityConfig.cs" />
     <Compile Include="Models\CustomValidation\AfterNow.cs" />
+    <Compile Include="Models\CustomValidation\SameDay.cs" />
     <Compile Include="Models\Event.cs" />
     <Compile Include="Models\Activity.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -129,7 +130,9 @@
     <Compile Include="ZenithDataModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

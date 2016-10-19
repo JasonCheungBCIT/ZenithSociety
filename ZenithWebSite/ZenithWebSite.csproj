@@ -206,17 +206,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201610152114031_Initialization.cs" />
-    <Compile Include="Migrations\201610152114031_Initialization.Designer.cs">
-      <DependentUpon>201610152114031_Initialization.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201610160730477_Updated Models.cs" />
-    <Compile Include="Migrations\201610160730477_Updated Models.Designer.cs">
-      <DependentUpon>201610160730477_Updated Models.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201610180611522_added Events.cs" />
-    <Compile Include="Migrations\201610180611522_added Events.Designer.cs">
-      <DependentUpon>201610180611522_added Events.cs</DependentUpon>
+    <Compile Include="Migrations\201610191910308_Initialization.cs" />
+    <Compile Include="Migrations\201610191910308_Initialization.Designer.cs">
+      <DependentUpon>201610191910308_Initialization.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -317,14 +309,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201610152114031_Initialization.resx">
-      <DependentUpon>201610152114031_Initialization.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201610160730477_Updated Models.resx">
-      <DependentUpon>201610160730477_Updated Models.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201610180611522_added Events.resx">
-      <DependentUpon>201610180611522_added Events.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201610191910308_Initialization.resx">
+      <DependentUpon>201610191910308_Initialization.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -26,8 +26,9 @@ namespace ZenithDataLib.Models
         [Required]
         [DataType(DataType.DateTime)]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy hh:mm tt}")]
-        [GreaterThan("FromDate")]
-        [Display(Name = "To")]  // Note: FoolProof Nuget
+        [GreaterThan("FromDate")] // Note: FoolProof Nuget
+        [SameDay("FromDate")]
+        [Display(Name = "To")]  
         public DateTime ToDate { get; set; }
 
         [Required]

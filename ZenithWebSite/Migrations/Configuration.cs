@@ -6,7 +6,8 @@ namespace ZenithWebSite.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
     using ZenithDataLib.Models;
-    internal sealed class Configuration : DbMigrationsConfiguration<ZenithDataLib.Models.ZenithContext>
+
+    internal sealed class Configuration : DbMigrationsConfiguration<ZenithContext>
     {
         public Configuration()
         {
@@ -14,7 +15,7 @@ namespace ZenithWebSite.Migrations
             MigrationsDirectory = @"Migrations";
         }
 
-        protected override void Seed(ZenithDataLib.Models.ZenithContext context)
+        protected override void Seed(ZenithContext context)
         {
             //  This method will be called after migrating to the latest version.
 

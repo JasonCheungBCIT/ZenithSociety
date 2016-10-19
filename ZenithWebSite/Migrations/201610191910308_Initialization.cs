@@ -12,7 +12,7 @@ namespace ZenithWebSite.Migrations
                 c => new
                     {
                         ActivityId = c.Int(nullable: false, identity: true),
-                        ActivityDescription = c.String(),
+                        ActivityDescription = c.String(nullable: false),
                         CreationDate = c.DateTime(nullable: false),
                     })
                 .PrimaryKey(t => t.ActivityId);
@@ -24,21 +24,21 @@ namespace ZenithWebSite.Migrations
                         EventId = c.Int(nullable: false, identity: true),
                         FromDate = c.DateTime(nullable: false),
                         ToDate = c.DateTime(nullable: false),
-                        CreatedBy = c.String(),
                         IsActive = c.Boolean(nullable: false),
+                        CreatedBy = c.String(),
                         CreationDate = c.DateTime(nullable: false),
-                        Activity_ActivityId = c.Int(),
+                        ActivityId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.EventId)
-                .ForeignKey("dbo.Activities", t => t.Activity_ActivityId)
-                .Index(t => t.Activity_ActivityId);
+                .ForeignKey("dbo.Activities", t => t.ActivityId, cascadeDelete: true)
+                .Index(t => t.ActivityId);
             
         }
         
         public override void Down()
         {
-            DropForeignKey("dbo.Events", "Activity_ActivityId", "dbo.Activities");
-            DropIndex("dbo.Events", new[] { "Activity_ActivityId" });
+            DropForeignKey("dbo.Events", "ActivityId", "dbo.Activities");
+            DropIndex("dbo.Events", new[] { "ActivityId" });
             DropTable("dbo.Events");
             DropTable("dbo.Activities");
         }
