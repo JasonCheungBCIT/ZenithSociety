@@ -32,15 +32,7 @@ namespace ZenithDataLib.Models.CustomValidation
 
             if (thisDate.Date != otherDate.Date)
                 return new ValidationResult("Must be on the same date");
-            
-
-
-            /*
-            if (model.FromDate != model.ToDate)
-            {
-
-            }
-            */
+           
             return ValidationResult.Success;
         }
     }

@@ -14,7 +14,7 @@ namespace ZenithWebSite.Controllers
         public ActionResult Index()
         {
             var @event = db.Event.Include(that => that.Activity);
-
+            
             Dictionary<String, List<Event>> Week = new Dictionary<String, List<Event>>();
 
             //Find the monday of this week
@@ -30,7 +30,7 @@ namespace ZenithWebSite.Controllers
             @event = @event.Where(e => e.FromDate >= monday && e.FromDate < sunday);
 
             //add to dictionary
-            foreach (var index in @event)
+            foreach (var index in @event.OrderBy(name => name.FromDate).ToList())
             {
                 if (index.IsActive)
                 {
