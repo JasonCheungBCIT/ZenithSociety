@@ -50,41 +50,5 @@ namespace ZenithWebSite.Controllers
 
             return View();
         }
-
-        public ActionResult All()
-        {
-            var @event = db.Event.Include(that => that.Activity);
-
-            Dictionary<String, List<Event>> Week = new Dictionary<String, List<Event>>();
-
-
-            //add to dictionary
-            foreach (var index in @event)
-            {
-                if (index.IsActive)
-                {
-                    if (Week.ContainsKey(index.FromDate.ToLongDateString()))
-                    {
-                        Week[index.FromDate.ToLongDateString()].Add(index);
-                    }
-                    else
-                    {
-                        Week[index.FromDate.ToLongDateString()] = new List<Event>();
-                        Week[index.FromDate.ToLongDateString()].Add(index);
-                    }
-                }
-            }
-
-            ViewBag.Week = Week.ToList();
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
     }
 }

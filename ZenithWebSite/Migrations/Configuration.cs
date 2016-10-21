@@ -103,6 +103,109 @@ namespace ZenithWebSite.Migrations
                 CreationDate = new DateTime(2016, 10, 20, 12, 0, 0),
                 Activity = db.Activity.First(a => a.ActivityId == 2)
             });
+            events.Add(new Event()
+            {
+                EventId = 6,
+                FromDate = new DateTime(2016, 10, 25, 10, 30, 0),
+                ToDate = new DateTime(2016, 10, 25, 12, 0, 0),
+                CreatedBy = "Francis",
+                IsActive = true,
+                CreationDate = new DateTime(2016, 10, 20, 12, 0, 0),
+                Activity = db.Activity.First(a => a.ActivityId == 1)
+            });
+            events.Add(new Event()
+            {
+                EventId = 7,
+                FromDate = new DateTime(2016, 10, 26, 10, 30, 0),
+                ToDate = new DateTime(2016, 10, 26, 12, 0, 0),
+                CreatedBy = "Francis",
+                IsActive = true,
+                CreationDate = new DateTime(2016, 10, 20, 12, 0, 0),
+                Activity = db.Activity.First(a => a.ActivityId == 2)
+            });
+            events.Add(new Event()
+            {
+                EventId = 8,
+                FromDate = new DateTime(2016, 10, 27, 10, 30, 0),
+                ToDate = new DateTime(2016, 10, 27, 12, 0, 0),
+                CreatedBy = "Francis",
+                IsActive = true,
+                CreationDate = new DateTime(2016, 10, 20, 12, 0, 0),
+                Activity = db.Activity.First(a => a.ActivityId == 3)
+            });
+            events.Add(new Event()
+            {
+                EventId = 9,
+                FromDate = new DateTime(2016, 10, 27, 10, 30, 0),
+                ToDate = new DateTime(2016, 10, 27, 12, 0, 0),
+                CreatedBy = "Francis",
+                IsActive = true,
+                CreationDate = new DateTime(2016, 10, 20, 12, 0, 0),
+                Activity = db.Activity.First(a => a.ActivityId == 1)
+            });
+            events.Add(new Event()
+            {
+                EventId = 10,
+                FromDate = new DateTime(2016, 10, 28, 10, 30, 0),
+                ToDate = new DateTime(2016, 10, 28, 12, 0, 0),
+                CreatedBy = "Francis",
+                IsActive = true,
+                CreationDate = new DateTime(2016, 10, 20, 12, 0, 0),
+                Activity = db.Activity.First(a => a.ActivityId == 1)
+            });
+            events.Add(new Event()
+            {
+                EventId = 11,
+                FromDate = new DateTime(2016, 10, 29, 10, 30, 0),
+                ToDate = new DateTime(2016, 10, 29, 12, 0, 0),
+                CreatedBy = "Francis",
+                IsActive = true,
+                CreationDate = new DateTime(2016, 10, 20, 12, 0, 0),
+                Activity = db.Activity.First(a => a.ActivityId == 2)
+            });
+            events.Add(new Event()
+            {
+                EventId = 12,
+                FromDate = new DateTime(2016, 10, 21, 10, 30, 0),
+                ToDate = new DateTime(2016, 10, 21, 12, 0, 0),
+                CreatedBy = "Jay",
+                IsActive = true,
+                CreationDate = new DateTime(2016, 10, 20, 12, 0, 0),
+                Activity = db.Activity.First(a => a.ActivityId == 2)
+            });
+            events.Add(new Event()
+            {
+                EventId = 13,
+                FromDate = new DateTime(2016, 10, 21, 10, 30, 0),
+                ToDate = new DateTime(2016, 10, 21, 12, 0, 0),
+                CreatedBy = "Bob",
+                IsActive = true,
+                CreationDate = new DateTime(2016, 10, 20, 12, 0, 0),
+                Activity = db.Activity.First(a => a.ActivityId == 1)
+            });
+            events.Add(new Event()
+            {
+                EventId = 14,
+                FromDate = new DateTime(2016, 10, 22, 10, 30, 0),
+                ToDate = new DateTime(2016, 10, 22, 12, 0, 0),
+                CreatedBy = "Bob",
+                IsActive = true,
+                CreationDate = new DateTime(2016, 10, 20, 12, 0, 0),
+                Activity = db.Activity.First(a => a.ActivityId == 2)
+            });
+            events.Add(new Event()
+            {
+                EventId = 15,
+                FromDate = new DateTime(2016, 10, 23, 10, 30, 0),
+                ToDate = new DateTime(2016, 10, 23, 12, 0, 0),
+                CreatedBy = "Bob",
+                IsActive = true,
+                CreationDate = new DateTime(2016, 10, 20, 12, 0, 0),
+                Activity = db.Activity.First(a => a.ActivityId == 1)
+            });
+
+
+
             return events;
         }
     }
