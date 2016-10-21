@@ -79,6 +79,10 @@ namespace ZenithWebSite.Controllers
             {
                 return HttpNotFound();
             }
+            // Load existing dates into input properly 
+            ViewBag.FromDate = @event.FromDate.ToString("yyyy-MM-dd HH:mm").Replace(" ", "T"); 
+            ViewBag.ToDate = @event.ToDate.ToString("yyyy-MM-dd HH:mm").Replace(" ", "T");
+            // Load activity lookup drop down list 
             ViewBag.ActivityId = new SelectList(db.Activity, "ActivityId", "ActivityDescription", @event.ActivityId);
             return View(@event);
         }
